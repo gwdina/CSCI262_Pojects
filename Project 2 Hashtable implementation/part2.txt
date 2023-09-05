@@ -1,0 +1,21 @@
+Instrument description:
+There is only two functions in instrument class: test_time and hisagram.
+Test_time grabs and opens the file then processed to dump its content into a vector,
+that vector content is then inserted into a hash function with time being calculated for when it
+starts and ends; this is done for default, hash1, hash2, hash3, hash 4. The hisagram
+does the same thing as Test_time and instead of calculating the time it instead calls a function I
+made in hashtable.h: buckets; what the buckets function does is find the max bucket size (for later) and
+stores each bucket size into a vector, then uses a double for loop with the first one going over each size
+(0-max) and then checking if the bucket size match that size at that current time and counts it.
+Both functions print out their findings in main, also they must be both called into main with the txt file
+as a parameter.
+
+Ranking:
+In 1st place is hash3, because when running random.txt and dictionary.txt the fasted result
+came from hash3. The others depend on which txt file was used, maybe it was due to the number
+of items in each txt file, dictionary.txt is bigger than random.txt.
+dictionary.txt, the order was (on average) hash3, default, hash4, hash3, hash2, and hash1.
+random.txt, the order was (on average) hash3, hash4, hash1, default, and hash2.
+So 5th place was a tie (somehow) between hash1 and hash2: hash1 was worst in
+dictionary.txt always being greater than 1 second, and hash2 was worst in random.txt but it
+was by milliseconds.
